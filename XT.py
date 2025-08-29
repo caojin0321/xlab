@@ -8,7 +8,7 @@ from Globals import getenv, get_tokens, DEFAULT_SETTINGS
 from Models import ChatCompletions, TasksToDo, ChainCommandName, TranslationRequest
 from datetime import datetime
 from typing import ( 
-    List,
+    List, 
     Type,
     Union,
     get_args,
