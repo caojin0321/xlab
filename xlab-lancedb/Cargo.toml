@@ -1,0 +1,40 @@
+[package]
+name = "xlab-lancedb"
+version = "0.2.21"
+edition = { workspace = true }
+license = "MIT"
+readme = "README.md"
+description = "xlab vector store index integration for LanceDB."
+repository = "https://github.com/caojin0321/xlab"
+
+[dependencies]
+lancedb = { workspace = true }
+xlab-core = { path = "../xlab-core", version = "0.19.0" }
+arrow-array = { workspace = true }
+serde_json = { workspace = true }
+serde = { workspace = true }
+futures = { workspace = true }
+
+# https://github.com/jhpratt/deranged/issues/18
+deranged = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true }
+anyhow = { workspace = true }
+httpmock = { workspace = true }
+
+[[example]]
+name = "vector_search_local_ann"
+required-features = ["xlab-core/derive"]
+
+[[example]]
+name = "vector_search_local_enn"
+required-features = ["xlab-core/derive"]
+
+[[example]]
+name = "vector_search_s3_ann"
+required-features = ["xlab-core/derive"]
+
+[[test]]
+name = "integration_tests"
+required-features = ["xlab-core/derive"]
