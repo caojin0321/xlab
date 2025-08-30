@@ -4,7 +4,7 @@ use xlab::{
     embeddings::EmbeddingsBuilder,
     providers::openai::{Client, TEXT_EMBEDDING_ADA_002},
     vector_store::{InsertDocuments, VectorStoreIndex, request::VectorSearchRequest},
-};
+}; 
 use xlab_scylladb::{ScyllaDbVectorStore, create_session};
 use serde::{Deserialize, Serialize};
 use std::env;
