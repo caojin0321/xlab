@@ -2,7 +2,7 @@ use std::fmt::Display;
 
 use xlab::{
     Embed, OneOrMany,
-    embeddings::{Embedding, EmbeddingModel},
+    embeddings::{Embedding, EmbeddingModel}, 
     vector_store::{
         InsertDocuments, VectorStoreError, VectorStoreIndex, request::VectorSearchRequest,
     },
