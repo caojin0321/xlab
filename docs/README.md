@@ -1,8 +1,8 @@
 # yandaai AI
 
-yandaai is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, yandaai stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, yandaai is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
+Yanda AI is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, yandaai stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, yandaai is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
 
-Embracing the spirit of extremity in every facet of life, we introduce yandaai. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, yandaai combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
+Embracing the spirit of extremity in every facet of life, we introduce Yanda AI. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, Yanda AI combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
 
 ## Table of Contents 📖
 
@@ -48,7 +48,7 @@ Please note that using some AI providers (such as OpenAI's GPT-4 API) can be exp
 - **RESTful API**: FastAPI-powered RESTful API for seamless integration with external applications and services.
 - **Expanding AI Support**: Continually updated to include new AI providers and services, ensuring the software stays at the forefront of AI technology.
 
-The features that yandaai provides cover a wide range of services and are used for different tasks. Refer to [Processes and Frameworks](https://sr_fede.github.io/yandaai/2-Concepts/01-Processes%20and%20Frameworks.html) for more details about the services and framework.
+The features that Yanda AI provides cover a wide range of services and are used for different tasks. Refer to [Processes and Frameworks](https://sr_fede.github.io/yandaai/2-Concepts/01-Processes%20and%20Frameworks.html) for more details about the services and framework.
 
 ## Quick Start Guide
 
@@ -93,7 +93,7 @@ Run the script with Python:
 python start.py
 ```
 
-To run yandaai with ezLocalai, use the `--with-ezlocalai` flag:
+To run Yanda AI with ezLocalai, use the `--with-ezlocalai` flag:
 
 ```bash
 python start.py --with-ezlocalai true
@@ -174,9 +174,9 @@ python start.py --help
 
 After setting up the environment variables and ensuring Docker and Docker Compose are installed, the script will:
 
-1. Stop any running yandaai Docker containers
+1. Stop any running Yanda AI Docker containers
 2. Pull the latest Docker images (if auto-update is enabled)
-3. Start the yandaai services using Docker Compose
+3. Start the Yanda AI services using Docker Compose
 
 ## Troubleshooting
 
@@ -196,7 +196,7 @@ After setting up the environment variables and ensuring Docker and Docker Compos
 
 ## Configuration
 
-Each yandaai Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
+Each Yanda AI Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
 
 ## Documentation
 
@@ -204,4 +204,4 @@ Need more information? Check out the documentation for more details to get a bet
 
 ## Other Repositories
 
-Check out the other yandaai repositories - these include the yandaai Streamlit Web UI, yandaai Python SDK, yandaai TypeScript SDK, yandaai Dart SDK, yandaai C# SDK, and more!
+Check out the other Yanda AI repositories - these include the Yanda AI Streamlit Web UI, Yanda AI Python SDK, Yanda AI TypeScript SDK, Yanda AI Dart SDK, Yanda AI C# SDK, and more!
