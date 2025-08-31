@@ -1,6 +1,6 @@
 //! This example demonstrates how to perform a vector search on a Neo4j database.
 //! It is based on the [Neo4j Embeddings & Vector Index Tutorial](https://neo4j.com/docs/genai/tutorials/embeddings-vector-indexes/).
-//! The tutorial uses the `recommendations` dataset and the `moviePlots` index, which is created in the tutorial.
+//! The tutorial uses the `recommendations` dataset and the `moviePlots` index, which is created in the tutorial. 
 //! They both need to be configured and the database running before running this example.
 //!
 //! Neo4j provides a demo database for the `recommendations` dataset (see [Github Neo4j-Graph-Examples/recommendations](https://github.com/neo4j-graph-examples/recommendations/tree/main?tab=readme-ov-file#setup)).
