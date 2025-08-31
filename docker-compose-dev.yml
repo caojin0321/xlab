@@ -5,7 +5,7 @@ services:
       DATABASE_TYPE: ${DATABASE_TYPE:-sqlite}
       DATABASE_NAME: ${DATABASE_NAME:-models/yandaai} 
       UVICORN_WORKERS: ${UVICORN_WORKERS:-10}
-      yandaai_API_KEY: ${yandaai_API_KEY:-None} 
+      yandaai_API_KEY: ${yandaai_API_KEY:-None}  
       yandaai_URI: ${yandaai_URI:-http://yandaai:7437} 
       MAGIC_LINK_URL: ${AUTH_WEB:-http://localhost:3437}
       DISABLED_EXTENSIONS: ${DISABLED_EXTENSIONS}
