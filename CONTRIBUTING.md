@@ -6,7 +6,7 @@ General guidelines and requested contributions can be found in the [How to Contr
 
 ## Issues
 Before reporting an issue, please check existing or similar issues that are currently tracked.
-
+ 
 Additionally, please ensure that if you are submitting a bug ticket (ie, something doesn't work) that the bug is reproducible. If we cannot reproduce the bug, your ticket is likely to be marked either `wontfix` or closed (although it's likely we'll take note of it in case there's a secondary occurrence).
 
 ## Pull Requests
