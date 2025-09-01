@@ -1,7 +1,7 @@
 use xlab::vector_store::request::VectorSearchRequest;
 use serde_json::json;
 
-use xlab::client::EmbeddingsClient;
+use xlab::client::EmbeddingsClient; 
 use xlab::vector_store::VectorStoreIndex;
 use xlab::{
     Embed, OneOrMany,
