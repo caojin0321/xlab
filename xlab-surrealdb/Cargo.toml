@@ -1,0 +1,23 @@
+[package]
+name = "xlab-surrealdb"
+version = "0.1.16"
+edition = { workspace = true }
+description = "SurrealDB vector store implementation for the xlab framework"
+license = "MIT"
+
+[dependencies]
+surrealdb = { workspace = true, features = ["protocol-ws", "kv-mem"] }
+xlab-core = { path = "../xlab-core", version = "0.19.0", features = ["derive"] }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+uuid = { workspace = true, features = ["v4"] }
+
+[dev-dependencies]
+anyhow = { workspace = true }
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+
+[[example]]
+name = "vector_search_surreal"
+required-features = ["xlab-core/derive"]

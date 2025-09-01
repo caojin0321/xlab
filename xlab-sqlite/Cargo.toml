@@ -1,0 +1,26 @@
+[package]
+name = "xlab-sqlite"
+version = "0.1.21"
+edition = { workspace = true }
+description = "SQLite-based vector store implementation for the xlab framework"
+license = "MIT"
+
+[lib]
+doctest = false
+
+[dependencies]
+xlab-core = { path = "../xlab-core", version = "0.19.0", features = ["derive"] }
+rusqlite = { workspace = true, features = ["bundled"] }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+sqlite-vec = { workspace = true }
+tokio-rusqlite = { workspace = true, features = ["bundled"] }
+tracing = { workspace = true }
+zerocopy = { workspace = true }
+chrono = { workspace = true }
+
+[dev-dependencies]
+anyhow = { workspace = true }
+httpmock = { workspace = true }
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
