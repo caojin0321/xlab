@@ -2,7 +2,7 @@ use xlab::client::{EmbeddingsClient, ProviderClient};
 use xlab::vector_store::request::VectorSearchRequest;
 use xlab::{
     Embed,
-    embeddings::EmbeddingsBuilder,
+    embeddings::EmbeddingsBuilder, 
     vector_store::{InsertDocuments, VectorStoreIndex},
 };
 use xlab_surrealdb::{Mem, SurrealVectorStore};
