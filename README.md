@@ -9,7 +9,7 @@
 
 - [Table of contents](#table-of-contents)
 - [What is yoob?](#what-is-yoob)
-- [High-level features](#high-level-features)
+- [High-level features](#high-level-features) 
 - [Who's using yoob in production?](#who-is-using-yoob-in-production)
 - [Get Started](#get-started)
   - [Simple example:](#simple-example)
