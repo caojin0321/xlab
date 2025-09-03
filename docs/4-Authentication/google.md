@@ -10,7 +10,7 @@ Ensure you have the following prerequisites before proceeding:
 
 1. Python environment with necessary dependencies.
 2. Google Cloud project with the required APIs enabled.
-
+ 
 ### Step-by-Step Guide
 
 #### 1. Enable Required APIs
