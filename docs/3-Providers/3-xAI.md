@@ -1,7 +1,7 @@
 # xAI
 
 - [xAI](https://docs.x.ai/docs)
-- [r136](https://github.com/sr_fede/r136)
+- [yandaai](https://github.com/sr_fede/yandaai)
 
 ⚠️ **Please note that using some AI providers, such as xAI's API, can be expensive. Monitor your usage carefully to avoid incurring unexpected costs. We're NOT responsible for your usage under any circumstance.**
 

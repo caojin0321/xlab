@@ -1,7 +1,7 @@
 {
   "gitbook": ">=3.0.0",
-  "title": "r136",
-  "description": "r136 is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, r136 delivers efficient and comprehensive AI solutions.",
+  "title": "yandaai",
+  "description": "yandaai is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, yandaai delivers efficient and comprehensive AI solutions.",
   "root": "./docs/",
   "structure": {
     "readme": "README.md",
@@ -18,11 +18,11 @@
       "minTocSize": 2
     },
     "github-issue-feedback": {
-      "repo": "sr_fede/r136",
+      "repo": "sr_fede/yandaai",
       "label": "Submit an issue"
     },
     "edit-link": {
-      "base": "https://github.com/sr_fede/r136/edit/master/docs/",
+      "base": "https://github.com/sr_fede/yandaai/edit/master/docs/",
       "label": "Edit"
     }
   },

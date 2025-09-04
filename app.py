@@ -67,8 +67,8 @@ signal.signal(signal.SIGTERM, signal_handler)
 signal.signal(signal.SIGINT, signal_handler)
 
 app = FastAPI(
-    title="r136",
-    description="r136 is an Artificial Intelligence Automation platform for creating and managing AI agents. Visit the GitHub repo for more information or to report issues. https://github.com/sr_fede/r136/",
+    title="yandaai",
+    description="yandaai is an Artificial Intelligence Automation platform for creating and managing AI agents. Visit the GitHub repo for more information or to report issues. https://github.com/sr_fede/yandaai/",
     version=version,
     docs_url="/",
     lifespan=lifespan,

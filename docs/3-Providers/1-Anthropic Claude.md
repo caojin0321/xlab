@@ -1,7 +1,7 @@
 # Anthropic Claude
 
 - [Anthropic Claude](https://console.anthropic.com/docs/access)
-- [r136](https://github.com/sr_fede/r136)
+- [yandaai](https://github.com/sr_fede/yandaai)
 
 ## Quick Start Guide
 

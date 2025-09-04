@@ -1,16 +1,16 @@
 services:
-  r136:
+  yandaai:
     init: true
     environment:
       DATABASE_TYPE: ${DATABASE_TYPE:-sqlite}
-      DATABASE_NAME: ${DATABASE_NAME:-models/r136} 
+      DATABASE_NAME: ${DATABASE_NAME:-models/yandaai} 
       UVICORN_WORKERS: ${UVICORN_WORKERS:-10}
-      r136_API_KEY: ${r136_API_KEY:-None} 
-      r136_URI: ${r136_URI:-http://r136:7437} 
+      yandaai_API_KEY: ${yandaai_API_KEY:-None} 
+      yandaai_URI: ${yandaai_URI:-http://yandaai:7437} 
       MAGIC_LINK_URL: ${AUTH_WEB:-http://localhost:3437}
       DISABLED_EXTENSIONS: ${DISABLED_EXTENSIONS}
       DISABLED_PROVIDERS: ${DISABLED_PROVIDERS}
-      WORKING_DIRECTORY: ${WORKING_DIRECTORY:-/r136/WORKSPACE}
+      WORKING_DIRECTORY: ${WORKING_DIRECTORY:-/yandaai/WORKSPACE}
       REGISTRATION_DISABLED: ${REGISTRATION_DISABLED:-false}
       TOKENIZERS_PARALLELISM: "false"
       LOG_LEVEL: ${LOG_LEVEL:-INFO}
@@ -27,11 +27,11 @@ services:
       TESLA_CLIENT_ID: ${TESLA_CLIENT_ID}
       TESLA_CLIENT_SECRET: ${TESLA_CLIENT_SECRET}
       STORAGE_BACKEND: ${STORAGE_BACKEND:-local}
-      STORAGE_CONTAINER: ${STORAGE_CONTAINER:-r136-workspace}
+      STORAGE_CONTAINER: ${STORAGE_CONTAINER:-yandaai-workspace}
       B2_KEY_ID: ${B2_KEY_ID:-}
       B2_APPLICATION_KEY: ${B2_APPLICATION_KEY:-}
       B2_REGION: ${B2_REGION:-us-west-002}
-      S3_BUCKET: ${S3_BUCKET:-r136-workspace}
+      S3_BUCKET: ${S3_BUCKET:-yandaai-workspace}
       S3_ENDPOINT: ${S3_ENDPOINT:-http://minio:9000}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-minioadmin}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-minioadmin}
@@ -39,7 +39,7 @@ services:
       AZURE_STORAGE_ACCOUNT_NAME: ${AZURE_STORAGE_ACCOUNT_NAME:-}
       AZURE_STORAGE_KEY: ${AZURE_STORAGE_KEY:-}
       SEED_DATA: ${SEED_DATA:-true}
-      AGENT_NAME: ${r136_AGENT:-XT}
+      AGENT_NAME: ${yandaai_AGENT:-XT}
       AGENT_PERSONA: ${AGENT_PERSONA}
       TRAINING_URLS: ${TRAINING_URLS}
       ENABLED_COMMANDS: ${ENABLED_COMMANDS}
@@ -69,30 +69,30 @@ services:
       GRAPHIQL: ${GRAPHIQL:-true}
       TZ: ${TZ:-America/New_York}
     ports:
-      - "${r136_PORT:-7437}:7437"
+      - "${yandaai_PORT:-7437}:7437"
     volumes:
-      - ./models:/r136/models
-      - ./WORKSPACE:/r136/WORKSPACE
+      - ./models:/yandaai/models
+      - ./WORKSPACE:/yandaai/WORKSPACE
       - /var/run/docker.sock:/var/run/docker.sock
-  r136interactive:
+  yandaaiinteractive:
     init: true
     environment:
       MODE: production
       NEXT_TELEMETRY_DISABLED: 1
-      r136_AGENT: ${r136_AGENT:-XT}
-      r136_FOOTER_MESSAGE: ${r136_FOOTER_MESSAGE:-r136 2024}
-      r136_SERVER: ${r136_SERVER:-http://localhost:7437}
-      APP_DESCRIPTION: ${APP_DESCRIPTION-r136 is an advanced artificial intelligence agent orchestration agent.}
-      APP_NAME: ${APP_NAME:-r136}
+      yandaai_AGENT: ${yandaai_AGENT:-XT}
+      yandaai_FOOTER_MESSAGE: ${yandaai_FOOTER_MESSAGE:-yandaai 2024}
+      yandaai_SERVER: ${yandaai_SERVER:-http://localhost:7437}
+      APP_DESCRIPTION: ${APP_DESCRIPTION-yandaai is an advanced artificial intelligence agent orchestration agent.}
+      APP_NAME: ${APP_NAME:-yandaai}
       APP_URI: ${APP_URI:-http://localhost:3437}
       LOG_VERBOSITY_SERVER: ${LOG_VERBOSITY_SERVER:-3}
-      r136_FILE_UPLOAD_ENABLED: ${r136_FILE_UPLOAD_ENABLED:-true}
-      r136_VOICE_INPUT_ENABLED: ${r136_VOICE_INPUT_ENABLED:-true}
-      r136_RLHF: ${r136_RLHF:-true}
-      r136_ALLOW_MESSAGE_EDITING: ${r136_ALLOW_MESSAGE_EDITING:-true}
-      r136_ALLOW_MESSAGE_DELETION: ${r136_ALLOW_MESSAGE_DELETION:-true}
-      r136_SHOW_OVERRIDE_SWITCHES: ${r136_SHOW_OVERRIDE_SWITCHES:-tts,websearch,analyze-user-input}
-      r136_CONVERSATION_MODE: ${r136_CONVERSATION_MODE:-select}
+      yandaai_FILE_UPLOAD_ENABLED: ${yandaai_FILE_UPLOAD_ENABLED:-true}
+      yandaai_VOICE_INPUT_ENABLED: ${yandaai_VOICE_INPUT_ENABLED:-true}
+      yandaai_RLHF: ${yandaai_RLHF:-true}
+      yandaai_ALLOW_MESSAGE_EDITING: ${yandaai_ALLOW_MESSAGE_EDITING:-true}
+      yandaai_ALLOW_MESSAGE_DELETION: ${yandaai_ALLOW_MESSAGE_DELETION:-true}
+      yandaai_SHOW_OVERRIDE_SWITCHES: ${yandaai_SHOW_OVERRIDE_SWITCHES:-tts,websearch,analyze-user-input}
+      yandaai_CONVERSATION_MODE: ${yandaai_CONVERSATION_MODE:-select}
       INTERACTIVE_MODE: ${INTERACTIVE_MODE:-chat}
       ALLOW_EMAIL_SIGN_IN: ${ALLOW_EMAIL_SIGN_IN:-true}
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
@@ -101,7 +101,7 @@ services:
       TESLA_CLIENT_ID: ${TESLA_CLIENT_ID}
       TZ: ${TZ:-America/New_York}
     ports:
-      - "${r136_INTERACTIVE_PORT:-3437}:3437"
+      - "${yandaai_INTERACTIVE_PORT:-3437}:3437"
     restart: unless-stopped
     volumes:
       - ./node_modules:/app/node_modules

@@ -1,7 +1,7 @@
 # Google Gemini
 
 - [Google Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini)
-- [r136](https://github.com/sr_fede/r136)
+- [yandaai](https://github.com/sr_fede/yandaai)
 
 ## Quick Start Guide
 

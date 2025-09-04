@@ -1,17 +1,17 @@
-# Preinstalled r136 ISOs
+# Preinstalled yandaai ISOs
 
-You can download preinstalled r136 ISOs from the [Playbook](https://www.playbook.com/s/greengecko/r136-isos) website.
+You can download preinstalled yandaai ISOs from the [Playbook](https://www.playbook.com/s/greengecko/yandaai-isos) website.
 
-## r136.iso
+## yandaai.iso
 
 - **Description:** Includes the JoshXT workstation script preinstalled.
 
-## r136installed.iso
+## yandaaiinstalled.iso
 
-- **Description:** Includes the JoshXT workstation script preinstalled. Also, this ISO includes r136 preinstalled on Docker.
+- **Description:** Includes the JoshXT workstation script preinstalled. Also, this ISO includes yandaai preinstalled on Docker.
 
-Be sure to check out the `sha256sums.txt` located [here](https://www.playbook.com/s/greengecko/r136-isos?assetToken=F9FXZkX6N3NqHGMne6m4v2cz) to verify your file is safe and has not been altered.
+Be sure to check out the `sha256sums.txt` located [here](https://www.playbook.com/s/greengecko/yandaai-isos?assetToken=F9FXZkX6N3NqHGMne6m4v2cz) to verify your file is safe and has not been altered.
 
-Username/Password: r136
+Username/Password: yandaai
 
 Feel free to download the ISO that suits your requirements best!

@@ -18,10 +18,10 @@ except ImportError:
     import pyaudio
 
 try:
-    from r136sdk import r136SDK
+    from yandaaisdk import yandaaiSDK
 except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "r136sdk"])
-    from r136sdk import r136SDK
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "yandaaisdk"])
+    from yandaaisdk import yandaaiSDK
 
 try:
     from faster_whisper import WhisperModel
@@ -44,11 +44,11 @@ except ImportError:
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    filename="r136_listen.log",
+    filename="yandaai_listen.log",
 )
 
 
-class r136Listen:
+class yandaaiListen:
     def __init__(
         self,
         server="http://localhost:7437",
@@ -58,7 +58,7 @@ class r136Listen:
         whisper_model="base.en",
         wake_word="hey assistant",
     ):
-        self.sdk = r136SDK(base_uri=server, api_key=api_key)
+        self.sdk = yandaaiSDK(base_uri=server, api_key=api_key)
         self.agent_name = agent_name
         self.wake_word = wake_word.lower()
         self.wake_functions = {"chat": self.default_voice_chat}
@@ -348,12 +348,12 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="r136 Voice Assistant with Continuous Recording"
+        description="yandaai Voice Assistant with Continuous Recording"
     )
     parser.add_argument(
-        "--server", default="http://localhost:7437", help="r136 server URL"
+        "--server", default="http://localhost:7437", help="yandaai server URL"
     )
-    parser.add_argument("--api_key", default="", help="r136 API key")
+    parser.add_argument("--api_key", default="", help="yandaai API key")
     parser.add_argument("--agent_name", default="gpt4free", help="Name of the agent")
     parser.add_argument(
         "--conversation_name", default="", help="Name of the conversation"
@@ -368,7 +368,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     try:
-        listener = r136Listen(
+        listener = yandaaiListen(
             server=args.server,
             api_key=args.api_key,
             agent_name=args.agent_name,
@@ -378,5 +378,5 @@ if __name__ == "__main__":
         )
         listener.listen()
     except Exception as e:
-        logging.error(f"Error initializing or running r136Listen: {str(e)}")
+        logging.error(f"Error initializing or running yandaaiListen: {str(e)}")
         logging.debug(traceback.format_exc())

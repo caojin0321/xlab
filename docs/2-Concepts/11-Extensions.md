@@ -1,6 +1,6 @@
-# r136 Extensions
+# yandaai Extensions
 
-r136 extensions are modular components that provide additional capabilities to AI agents through a "bolt-on" architecture. This approach allows for seamless integration of new functionalities without modifying the core system.
+yandaai extensions are modular components that provide additional capabilities to AI agents through a "bolt-on" architecture. This approach allows for seamless integration of new functionalities without modifying the core system.
 
 ## Authentication & Context Management
 
@@ -10,13 +10,13 @@ Extensions receive several key pieces of context during initialization:
 
 ```python
 def __init__(self, **kwargs):
-    # r136 SDK initialized with user's JWT
-    self.ApiClient = kwargs["ApiClient"] if "ApiClient" in kwargs else r136SDK(
-        base_uri=getenv("r136_URI"),
+    # yandaai SDK initialized with user's JWT
+    self.ApiClient = kwargs["ApiClient"] if "ApiClient" in kwargs else yandaaiSDK(
+        base_uri=getenv("yandaai_URI"),
         api_key=kwargs["api_key"] if "api_key" in kwargs else "",
     )
     
-    # User's r136 JWT for authentication
+    # User's yandaai JWT for authentication
     self.api_key = kwargs["api_key"] if "api_key" in kwargs else ""
     
     # Agent and conversation context
@@ -31,9 +31,9 @@ def __init__(self, **kwargs):
     self.settings = kwargs  # Contains any additional extension-specific settings
 ```
 
-## r136 SDK Integration
+## yandaai SDK Integration
 
-Extensions can leverage the r136 SDK ([PyPI](https://pypi.org/project/r136sdk) | [GitHub](https://github.com/r136/python-sdk)) to interact with core r136 functionality. The SDK is automatically injected via `self.ApiClient` and initialized with the user's context.
+Extensions can leverage the yandaai SDK ([PyPI](https://pypi.org/project/yandaaisdk) | [GitHub](https://github.com/yandaai/python-sdk)) to interact with core yandaai functionality. The SDK is automatically injected via `self.ApiClient` and initialized with the user's context.
 
 ### Common SDK Operations
 
@@ -170,12 +170,12 @@ self.ApiClient.new_conversation_message(
    - Prevent recursive command execution
    - Maintain clean conversation logs
 
-The SDK provides a comprehensive interface to r136's capabilities, allowing extensions to leverage the full power of the platform while maintaining proper context and security boundaries. Proper use of control flags ensures efficient resource usage and prevents potential issues like recursive command execution or cluttered conversation logs.
+The SDK provides a comprehensive interface to yandaai's capabilities, allowing extensions to leverage the full power of the platform while maintaining proper context and security boundaries. Proper use of control flags ensures efficient resource usage and prevents potential issues like recursive command execution or cluttered conversation logs.
 
 ### Important Considerations
 
-1. Always use `self.ApiClient` for r136 API operations to maintain user context, it is automatically injected into `kwargs`.
-2. Use `self.api_key` (user's JWT) for any operations requiring authentication, this is reserved specifically for r136 API calls. If using a different API, prepend the `api_key` variable name with the extension name, such as `OURA_API_KEY`.
+1. Always use `self.ApiClient` for yandaai API operations to maintain user context, it is automatically injected into `kwargs`.
+2. Use `self.api_key` (user's JWT) for any operations requiring authentication, this is reserved specifically for yandaai API calls. If using a different API, prepend the `api_key` variable name with the extension name, such as `OURA_API_KEY`.
 3. Respect the working directory boundaries for file operations, the agent should not work outside of `self.WORKING_DIRECTORY` at any time. This will contain file operations to the specific conversation.
 4. Access extension-specific settings through `kwargs`. These settings are automatically injected and can be used to configure extension behavior.
 5. Maintain conversation context for continuity
@@ -225,7 +225,7 @@ Example agent settings flow:
 
 ## Core Extensions Overview
 
-### r136 Actions Extension
+### yandaai Actions Extension
 
 Provides high-level orchestration and coordination capabilities across other extensions.
 
@@ -270,14 +270,14 @@ Enables AI agents to interact directly with GitHub repositories and manage devel
 
 - Repository management (cloning, creating, reading contents)
 - Issue tracking and management
-- Pull request creation and rr136w
+- Pull request creation and ryandaaiw
 - Code modification and improvement
 - Branch management
 - Automated code fixes and improvements
 
 **Example Use Cases:**
 
-- Automated code rr136ws
+- Automated code ryandaaiws
 - Issue resolution and PR creation
 - Repository maintenance
 - Code base improvements
@@ -395,7 +395,7 @@ class your_extension(Extensions):
 
 ### Docstring Design
 
-Docstrings are crucial for r136 extensions as they serve as the primary guidance for AI agents to understand when and how to use commands. Well-designed docstrings should include:
+Docstrings are crucial for yandaai extensions as they serve as the primary guidance for AI agents to understand when and how to use commands. Well-designed docstrings should include:
 
 #### Extension Class Docstring
 
