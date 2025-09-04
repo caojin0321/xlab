@@ -1,22 +1,22 @@
 [workspace]
 resolver = "3"
 members = [
-    "yoob-core",
-    "yoob-lancedb",
-    "yoob-mongodb",
-    "yoob-neo4j",
-    "yoob-postgres",
-    "yoob-qdrant",
-    "yoob-core/yoob-core-derive",
-    "yoob-scylladb",
-    "yoob-sqlite",
-    "yoob-surrealdb",
-    "yoob-eternalai",
-    "yoob-fastembed",
-    "yoob-bedrock",
-    "yoob-milvus",
-    "yoob-wasm",
-    "yoob-s3vectors",
+    "xlab-core",
+    "xlab-lancedb",
+    "xlab-mongodb",
+    "xlab-neo4j",
+    "xlab-postgres",
+    "xlab-qdrant",
+    "xlab-core/xlab-core-derive",
+    "xlab-scylladb",
+    "xlab-sqlite",
+    "xlab-surrealdb",
+    "xlab-eternalai",
+    "xlab-fastembed",
+    "xlab-bedrock",
+    "xlab-milvus",
+    "xlab-wasm",
+    "xlab-s3vectors",
 ]
 
 [profile.release]
@@ -91,4 +91,4 @@ reqwest-eventsource = "0.6.0"
 
 [workspace.metadata.cargo-autoinherit]
 # Skip cargo-autoinherit for these packages
-exclude-members = ["yoob-core", "yoob-derive"]
+exclude-members = ["xlab-core", "xlab-derive"]
