@@ -1,4 +1,4 @@
-<h1>Yoob AI</h1>
+<h1>XLAB AI</h1>
 
 ✨ If you would like to help spread the word about xlab, please consider starring the repo!
 
