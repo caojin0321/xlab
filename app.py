@@ -6,7 +6,7 @@ import asyncio
 import mimetypes
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware 
 from fastapi.responses import StreamingResponse
 from endpoints.Agent import app as agent_endpoints
 from endpoints.Chain import app as chain_endpoints
