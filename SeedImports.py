@@ -74,9 +74,9 @@ def import_extensions():
 
     ext = Extensions()
     extensions_data = ext.get_extensions()
-    # Delete "r136 Chains"
-    if "r136 Chains" in extensions_data:
-        del extensions_data["r136 Chains"]
+    # Delete "yandaai Chains"
+    if "yandaai Chains" in extensions_data:
+        del extensions_data["yandaai Chains"]
     extension_settings_data = Extensions().get_extension_settings()
     session = get_session()
 

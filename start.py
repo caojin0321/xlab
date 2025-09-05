@@ -119,7 +119,7 @@ def check_prerequisites():
         print("Docker is not installed.")
         install = prompt_user("Would you like to install Docker? (y/n)", "y")
         if install.lower() != "y":
-            print("Docker is required to run r136. Exiting.")
+            print("Docker is required to run yandaai. Exiting.")
             sys.exit(1)
         if not install_docker():
             print("Failed to install Docker. Please install it manually and try again.")
@@ -129,7 +129,7 @@ def check_prerequisites():
         print("Docker Compose is not installed.")
         install = prompt_user("Would you like to install Docker Compose? (y/n)", "y")
         if install.lower() != "y":
-            print("Docker Compose is required to run r136. Exiting.")
+            print("Docker Compose is required to run yandaai. Exiting.")
             sys.exit(1)
         if not install_docker_compose():
             print(
@@ -170,29 +170,29 @@ def get_default_env_vars():
     workspace_folder = os.path.normpath(os.path.join(os.getcwd(), "WORKSPACE"))
     machine_tz = get_localzone()
     return {
-        "r136_API_KEY": "",
-        "r136_URI": "http://localhost:7437",
-        "r136_PORT": "7437",
-        "r136_INTERACTIVE_PORT": "3437",
-        "r136_AGENT": "r136",
-        "r136_BRANCH": "stable",
-        "r136_FILE_UPLOAD_ENABLED": "true",
-        "r136_VOICE_INPUT_ENABLED": "true",
-        "r136_FOOTER_MESSAGE": "Powered by r136",
-        "r136_REQUIRE_API_KEY": "false",
-        "r136_RLHF": "true",
-        "r136_SHOW_SELECTION": "conversation,agent",
-        "r136_SHOW_AGENT_BAR": "true",
-        "r136_SHOW_APP_BAR": "true",
-        "r136_CONVERSATION_MODE": "select",
-        "r136_SHOW_OVERRIDE_SWITCHES": "tts,websearch,analyze-user-input",
+        "yandaai_API_KEY": "",
+        "yandaai_URI": "http://localhost:7437",
+        "yandaai_PORT": "7437",
+        "yandaai_INTERACTIVE_PORT": "3437",
+        "yandaai_AGENT": "yandaai",
+        "yandaai_BRANCH": "stable",
+        "yandaai_FILE_UPLOAD_ENABLED": "true",
+        "yandaai_VOICE_INPUT_ENABLED": "true",
+        "yandaai_FOOTER_MESSAGE": "Powered by yandaai",
+        "yandaai_REQUIRE_API_KEY": "false",
+        "yandaai_RLHF": "true",
+        "yandaai_SHOW_SELECTION": "conversation,agent",
+        "yandaai_SHOW_AGENT_BAR": "true",
+        "yandaai_SHOW_APP_BAR": "true",
+        "yandaai_CONVERSATION_MODE": "select",
+        "yandaai_SHOW_OVERRIDE_SWITCHES": "tts,websearch,analyze-user-input",
         "ALLOWED_DOMAINS": "*",
-        "APP_DESCRIPTION": "A chat powered by r136.",
-        "APP_NAME": "r136 Chat",
+        "APP_DESCRIPTION": "A chat powered by yandaai.",
+        "APP_NAME": "yandaai Chat",
         "APP_URI": "http://localhost:3437",
         "AUTH_WEB": "http://localhost:3437/user",
         "CREATE_AGENT_ON_REGISTER": "true",
-        "CREATE_r136_AGENT": "true",
+        "CREATE_yandaai_AGENT": "true",
         "DISABLED_PROVIDERS": "",
         "DISABLED_EXTENSIONS": "",
         "WORKING_DIRECTORY": workspace_folder.replace("\\", "/"),
@@ -201,11 +201,11 @@ def get_default_env_vars():
         "THEME_NAME": "doom",
         "ALLOW_EMAIL_SIGN_IN": "true",
         "DATABASE_TYPE": "sqlite",
-        "DATABASE_NAME": "models/r136",
+        "DATABASE_NAME": "models/yandaai",
         "LOG_LEVEL": "INFO",
         "LOG_FORMAT": "%(asctime)s | %(levelname)s | %(message)s",
         "UVICORN_WORKERS": "10",
-        "r136_AUTO_UPDATE": "true",
+        "yandaai_AUTO_UPDATE": "true",
         "EZLOCALAI_URI": f"http://{get_local_ip()}:8091/v1/",
         "DEFAULT_MODEL": "QuantFactory/dolphin-2.9.2-qwen2-7b-GGUF",
         "VISION_MODEL": "deepseek-ai/deepseek-vl-1.3b-chat",
@@ -214,9 +214,9 @@ def get_default_env_vars():
         "GPU_LAYERS": "0",
         "WITH_EZLOCALAI": "false",
         "REGISTRATION_DISABLED": "false",
-        "r136_ALLOW_MESSAGE_EDITING": "true",
-        "r136_ALLOW_MESSAGE_DELETION": "true",
-        "r136_SHOW_CHAT_THEME_TOGGLES": "",
+        "yandaai_ALLOW_MESSAGE_EDITING": "true",
+        "yandaai_ALLOW_MESSAGE_DELETION": "true",
+        "yandaai_SHOW_CHAT_THEME_TOGGLES": "",
         "LOG_VERBOSITY_SERVER": "3",
         "AOL_CLIENT_ID": "",
         "AOL_CLIENT_SECRET": "",
@@ -250,9 +250,9 @@ def set_environment(env_updates=None):
         for key, value in env_updates.items():
             if key in env_vars:
                 env_vars[key] = value
-    # Ensure r136_API_KEY is set
-    if env_vars["r136_API_KEY"] == "":
-        env_vars["r136_API_KEY"] = "".join(
+    # Ensure yandaai_API_KEY is set
+    if env_vars["yandaai_API_KEY"] == "":
+        env_vars["yandaai_API_KEY"] = "".join(
             random.choice(
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
             )
@@ -268,13 +268,13 @@ def set_environment(env_updates=None):
         print("Starting ezLocalai, this can take several minutes...")
         start_ezlocalai()
     dockerfile = "docker-compose.yml"
-    if env_vars["r136_BRANCH"] != "stable":
+    if env_vars["yandaai_BRANCH"] != "stable":
         dockerfile = "docker-compose-dev.yml"
-    if env_vars["r136_BRANCH"] != "stable":
+    if env_vars["yandaai_BRANCH"] != "stable":
         dockerfile = "docker-compose-dev.yml"
     else:
         dockerfile = "docker-compose.yml"
-    if str(env_vars["r136_AUTO_UPDATE"]).lower() == "true":
+    if str(env_vars["yandaai_AUTO_UPDATE"]).lower() == "true":
         command = f"docker compose -f {dockerfile} stop && docker compose -f {dockerfile} pull && docker compose -f {dockerfile} up -d"
     else:
         command = f"docker compose -f {dockerfile} stop && docker compose -f {dockerfile} up -d"
@@ -282,9 +282,9 @@ def set_environment(env_updates=None):
     try:
         run_shell_command(command)
     except KeyboardInterrupt:
-        print("\nStopping r136 containers...")
+        print("\nStopping yandaai containers...")
         run_shell_command(f"docker compose -f {dockerfile} stop")
-        print("r136 containers stopped.")
+        print("yandaai containers stopped.")
     except subprocess.CalledProcessError as e:
         print(f"An error occurred: {e}")
     return env_vars
@@ -381,7 +381,7 @@ def start_ezlocalai():
 
 if __name__ == "__main__":
     check_prerequisites()
-    parser = argparse.ArgumentParser(description="r136 Environment Setup")
+    parser = argparse.ArgumentParser(description="yandaai Environment Setup")
     # Add arguments for each environment variable
     for key, value in get_default_env_vars().items():
         parser.add_argument(
@@ -396,19 +396,19 @@ if __name__ == "__main__":
     arg_dict = {k: v for k, v in vars(args).items() if v is not None}
     # Convert hyphenated arg names back to underscore format
     env_updates = {k.upper().replace("-", "_"): v for k, v in arg_dict.items()}
-    # Check if .env file exists and if r136_AUTO_UPDATE is not set via command line
-    if not os.path.exists(".env") and "r136_AUTO_UPDATE" not in env_updates:
+    # Check if .env file exists and if yandaai_AUTO_UPDATE is not set via command line
+    if not os.path.exists(".env") and "yandaai_AUTO_UPDATE" not in env_updates:
         auto_update = prompt_user(
-            "Would you like r136 to auto update when this script is run in the future? (Y for yes, N for no)",
+            "Would you like yandaai to auto update when this script is run in the future? (Y for yes, N for no)",
             "y",
         )
         if auto_update.lower() == "y" or auto_update.lower() == "yes":
             auto_update = "true"
         else:
             auto_update = "false"
-        env_updates["r136_AUTO_UPDATE"] = auto_update
+        env_updates["yandaai_AUTO_UPDATE"] = auto_update
     # Apply updates and restart server
-    print("Please wait while r136 is starting, this can take several minutes...")
+    print("Please wait while yandaai is starting, this can take several minutes...")
     set_environment(env_updates=env_updates)
 
 
