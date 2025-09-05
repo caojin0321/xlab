@@ -3,7 +3,7 @@ use xlab::completion::Prompt;
 use xlab_eternalai::providers::eternalai::{
     Client, CompletionModel, NOUS_RESEARCH_HERMES_3_LLAMA_3_1_70B_FP8,
 };
-
+ 
 #[tokio::main]
 async fn main() -> Result<(), anyhow::Error> {
     tracing_subscriber::fmt()
