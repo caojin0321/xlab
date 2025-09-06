@@ -4,7 +4,7 @@ from yandaaisdk import yandaaiSDK
 from MagicalAuth import MagicalAuth
 from Conversations import get_conversation_name_by_id 
 from sqlalchemy.orm import joinedload 
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor 
 import datetime
 import logging
 import asyncio
