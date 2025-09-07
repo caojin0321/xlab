@@ -3,7 +3,7 @@ use aws_sdk_s3vectors::Client;
 use aws_sdk_s3vectors::config::Credentials;
 use xlab::Embed;
 use xlab::client::EmbeddingsClient;
-use xlab::embeddings::EmbeddingsBuilder;
+use xlab::embeddings::EmbeddingsBuilder; 
 use xlab::providers::openai::Client as OpenAIClient;
 use xlab::providers::openai::TEXT_EMBEDDING_ADA_002;
 use xlab::vector_store::request::VectorSearchRequest;
