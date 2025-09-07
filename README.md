@@ -1,28 +1,4 @@
-<p align="center">
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="img/yoob-caojin0321-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="img/yoob-caojin0321-light.svg">
-    <img src="img/yoob-caojin0321-light.svg" style="width: 40%; height: 40%;" alt="yoob logo">
-</picture>
-<br>
-<a href="https://docs.yoob.rs"><img src="https://img.shields.io/badge/📖 docs-yoob.rs-dca282.svg" /></a> &nbsp;
-<a href="https://docs.rs/yoob-core/latest/yoob/"><img src="https://img.shields.io/badge/docs-API Reference-dca282.svg" /></a> &nbsp;
-<a href="https://crates.io/crates/yoob-core"><img src="https://img.shields.io/crates/v/yoob-core.svg?color=dca282" /></a>
-&nbsp;
-<a href="https://crates.io/crates/yoob-core"><img src="https://img.shields.io/crates/d/yoob-core.svg?color=dca282" /></a>
-</br>
-<a href="https://discord.gg/caojin0321"><img src="https://img.shields.io/discord/511303648119226382?color=%236d82cc&label=Discord&logo=discord&logoColor=white" /></a>
-&nbsp;
-<a href="https://github.com/caojin0321/yoob"><img src="https://img.shields.io/github/stars/caojin0321/yoob?style=social" alt="stars - yoob" /></a>
-<br>
-<a href=""><img src="https://img.shields.io/badge/built_with-Rust-dca282.svg?logo=rust" /></a>
-&nbsp;
-<a href="https://twitter.com/ryzomeai"><img src="https://img.shields.io/twitter/follow/ryzomeai"></a> &nbsp
-
-<br>
-</p>
-&nbsp;
-
+Yoob AI
 
 <div align="center">
 
