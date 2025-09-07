@@ -1,7 +1,7 @@
 ci:
     just fmt
     just clippy
- 
+  
 clippy:
     cargo clippy --all-features --all-targets
 
