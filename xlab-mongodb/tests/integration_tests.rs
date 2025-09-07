@@ -9,7 +9,7 @@ use xlab::{
     embeddings::EmbeddingsBuilder,
     providers::openai,
     vector_store::{InsertDocuments, VectorStoreIndex},
-};
+}; 
 use xlab::{client::EmbeddingsClient, vector_store::request::VectorSearchRequest};
 use xlab_mongodb::{MongoDbVectorIndex, SearchParams};
 use serde_json::json;
