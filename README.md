@@ -1,17 +1,5 @@
 <h1>Yoob AI</h1>
 
-<div align="center">
-
-[📑 Docs](https://docs.yoob.rs)
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-[🌐 Website](https://yoob.rs)
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-[🤝 Contribute](https://github.com/caojin0321/yoob/issues/new)
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-[✍🏽 Blogs](https://docs.yoob.rs/guides)
-
-</div>
-
 ✨ If you would like to help spread the word about yoob, please consider starring the repo!
 
 > [!WARNING]
@@ -101,5 +89,4 @@ The following providers are available as separate companion-crates:
 <p align="center">
 <br>
 <br>
-<img src="img/built-by-caojin0321.svg" alt="Build by caojin0321" width="30%">
 </p>
