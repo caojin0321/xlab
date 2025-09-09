@@ -1,4 +1,4 @@
-Yoob AI
+<h1>Yoob AI</h1>
 
 <div align="center">
 
