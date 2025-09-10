@@ -4,7 +4,7 @@ import logging
 try:
     import openai
 except ImportError:
-    import sys
+    import sys 
     import subprocess
 
     subprocess.check_call([sys.executable, "-m", "pip", "install", "openai"])
