@@ -5,7 +5,7 @@ RUN pip install -r docker-requirements.txt
 COPY . .
 WORKDIR /yandaai
 # RUN python /yandaai/Transcription.py  
-EXPOSE 7437
+EXPOSE 7437 
 ENTRYPOINT ["python3", "DB.py"]
  
 
