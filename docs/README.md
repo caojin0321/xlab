@@ -1,12 +1,12 @@
-# Yuri AI
+# Zen AI
 
-Yuri AI is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, Yuriai stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, Yuriai is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
+Zen AI is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, Zenai stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, Zenai is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
 
-Embracing the spirit of extremity in every facet of life, we introduce Yuri AI. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, Yuri AI combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
+Embracing the spirit of extremity in every facet of life, we introduce Zen AI. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, Zen AI combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
 
 ## Table of Contents 📖
 
-- [Yuriai](#Yuriai)
+- [Zenai](#Zenai)
   - [Table of Contents 📖](#table-of-contents-)
   - [⚠️ Disclaimers](#️-disclaimers)
     - [Monitor Your Usage](#monitor-your-usage)
@@ -48,7 +48,7 @@ Please note that using some AI providers (such as OpenAI's GPT-4 API) can be exp
 - **RESTful API**: FastAPI-powered RESTful API for seamless integration with external applications and services.
 - **Expanding AI Support**: Continually updated to include new AI providers and services, ensuring the software stays at the forefront of AI technology.
 
-The features that Yuri AI provides cover a wide range of services and are used for different tasks. Refer to [Processes and Frameworks](https://sr_fede.github.io/Yuriai/2-Concepts/01-Processes%20and%20Frameworks.html) for more details about the services and framework.
+The features that Zen AI provides cover a wide range of services and are used for different tasks. Refer to [Processes and Frameworks](https://sr_fede.github.io/Zenai/2-Concepts/01-Processes%20and%20Frameworks.html) for more details about the services and framework.
 
 ## Quick Start Guide
 
@@ -75,8 +75,8 @@ Provide the following prerequisites based on the Operating System you use.
 If you're using Linux, you may need to prefix the `python` command with `sudo` depending on your system configuration.
 
 ```bash
-git clone https://github.com/sr_fede/Yuriai
-cd Yuriai
+git clone https://github.com/sr_fede/Zenai
+cd Zenai
 python start.py
 ```
 
@@ -93,7 +93,7 @@ Run the script with Python:
 python start.py
 ```
 
-To run Yuri AI with ezLocalai, use the `--with-ezlocalai` flag:
+To run Zen AI with ezLocalai, use the `--with-ezlocalai` flag:
 
 ```bash
 python start.py --with-ezlocalai true
@@ -102,38 +102,38 @@ python start.py --with-ezlocalai true
 You can also use command-line arguments to set specific environment variables to run in different ways. For example, to use the development branch and enable auto-updates, run:
 
 ```bash
-python start.py --Yuriai-branch dev --Yuriai-auto-update true --with-ezlocalai true
+python start.py --Zenai-branch dev --Zenai-auto-update true --with-ezlocalai true
 ```
 
-- Access the Yuriai Management interface at <http://localhost:8501> to create and manage your agents, prompts, chains, and configurations.
-- Access the Yuriai Interactive interface at <http://localhost:3437> to interact with your configured agents.
-- Access the Yuriai API documentation at <http://localhost:7437>
+- Access the Zenai Management interface at <http://localhost:8501> to create and manage your agents, prompts, chains, and configurations.
+- Access the Zenai Interactive interface at <http://localhost:3437> to interact with your configured agents.
+- Access the Zenai API documentation at <http://localhost:7437>
 
 ### Command-line Options
 
 The script supports setting any of the environment variables via command-line arguments. Here's a detailed list of available options:
 
-1. `--Yuriai-api-key`: Set the Yuriai API key (automatically generated if not provided)
-2. `--Yuriai-uri`: Set the Yuriai URI (default: `http://localhost:7437`)
-3. `--Yuriai-agent`: Set the default Yuriai agent (default: `Yuriai`)
-4. `--Yuriai-branch`: Choose between `stable` and `dev` branches
-5. `--Yuriai-file-upload-enabled`: Enable or disable file uploads (default: `true`)
-6. `--Yuriai-voice-input-enabled`: Enable or disable voice input (default: `true`)
-7. `--Yuriai-footer-message`: Set the footer message (default: `Powered by Yuriai`)
-8. `--Yuriai-require-api-key`: Require API key for access (default: `false`)
-9. `--Yuriai-rlhf`: Enable or disable reinforcement learning from hYuriain feedback (default: `true`)
-10. `--Yuriai-show-selection`: Set which selectors to show in the UI (default: `conversation,agent`)
-11. `--Yuriai-show-agent-bar`: Show or hide the agent bar in the UI (default: `true`)
-12. `--Yuriai-show-app-bar`: Show or hide the app bar in the UI (default: `true`)
-13. `--Yuriai-conversation-mode`: Set the conversation mode (default: `select`)
+1. `--Zenai-api-key`: Set the Zenai API key (automatically generated if not provided)
+2. `--Zenai-uri`: Set the Zenai URI (default: `http://localhost:7437`)
+3. `--Zenai-agent`: Set the default Zenai agent (default: `Zenai`)
+4. `--Zenai-branch`: Choose between `stable` and `dev` branches
+5. `--Zenai-file-upload-enabled`: Enable or disable file uploads (default: `true`)
+6. `--Zenai-voice-input-enabled`: Enable or disable voice input (default: `true`)
+7. `--Zenai-footer-message`: Set the footer message (default: `Powered by Zenai`)
+8. `--Zenai-require-api-key`: Require API key for access (default: `false`)
+9. `--Zenai-rlhf`: Enable or disable reinforcement learning from hZenain feedback (default: `true`)
+10. `--Zenai-show-selection`: Set which selectors to show in the UI (default: `conversation,agent`)
+11. `--Zenai-show-agent-bar`: Show or hide the agent bar in the UI (default: `true`)
+12. `--Zenai-show-app-bar`: Show or hide the app bar in the UI (default: `true`)
+13. `--Zenai-conversation-mode`: Set the conversation mode (default: `select`)
 14. `--allowed-domains`: Set allowed domains for API access (default: `*`)
 15. `--app-description`: Set the application description
-16. `--app-name`: Set the application name (default: `Yuriai Chat`)
+16. `--app-name`: Set the application name (default: `Zenai Chat`)
 17. `--app-uri`: Set the application URI (default: `http://localhost:3437`)
 18. `--auth-web`: Set the authentication web URI (default: `http://localhost:3437/user`)
 19. `--auth-provider`: Set the authentication provider (options: `none`, `magicalauth`)
-20. `--create-agent-on-register`: Create an agent named from your `Yuriai_AGENT` environment variable if it is different than `Yuriai` using settings from `default_agent.json` if defined (default: `true`)
-21. `--create-Yuriai-agent`: Create an agent called `Yuriai` and trains it on the Yuriai documentation upon user registration (default: `true`)
+20. `--create-agent-on-register`: Create an agent named from your `Zenai_AGENT` environment variable if it is different than `Zenai` using settings from `default_agent.json` if defined (default: `true`)
+21. `--create-Zenai-agent`: Create an agent called `Zenai` and trains it on the Zenai documentation upon user registration (default: `true`)
 22. `--disabled-providers`: Set disabled providers (comma-separated list)
 23. `--disabled-extensions`: Set disabled extensions (comma-separated list)
 24. `--working-directory`: Set the working directory (default: `./WORKSPACE`)
@@ -148,15 +148,15 @@ The script supports setting any of the environment variables via command-line ar
 33. `--theme-name`: Set the UI theme (options: `default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)
 34. `--allow-email-sign-in`: Allow email sign-in (default: `true`)
 35. `--database-type`: Set the database type (options: `sqlite`, `postgres`)
-36. `--database-name`: Set the database name (default: `models/Yuriai`)
+36. `--database-name`: Set the database name (default: `models/Zenai`)
 37. `--log-level`: Set the logging level (default: `INFO`)
 38. `--log-format`: Set the log format (default: `%(asctime)s | %(levelname)s | %(message)s`)
 40. `--uvicorn-workers`: Set the number of Uvicorn workers (default: `10`)
-41. `--Yuriai-auto-update`: Enable or disable auto-updates (default: `true`)
+41. `--Zenai-auto-update`: Enable or disable auto-updates (default: `true`)
 
 Options specific to ezLocalai:
 
-1. `--with-ezlocalai`: Start Yuriai with ezLocalai integration.
+1. `--with-ezlocalai`: Start Zenai with ezLocalai integration.
 2. `--ezlocalai-uri`: Set the ezLocalai URI (default: `http://{local_ip}:8091`)
 3. `--default-model`: Set the default language model for ezLocalai (default: `QuantFactory/dolphin-2.9.2-qwen2-7b-GGUF`)
 4. `--vision-model`: Set the vision model for ezLocalai (default: `deepseek-ai/deepseek-vl-1.3b-chat`)
@@ -174,9 +174,9 @@ python start.py --help
 
 After setting up the environment variables and ensuring Docker and Docker Compose are installed, the script will:
 
-1. Stop any running Yuri AI Docker containers
+1. Stop any running Zen AI Docker containers
 2. Pull the latest Docker images (if auto-update is enabled)
-3. Start the Yuri AI services using Docker Compose
+3. Start the Zen AI services using Docker Compose
 
 ## Troubleshooting
 
@@ -190,18 +190,18 @@ After setting up the environment variables and ensuring Docker and Docker Compos
 
 ## Security Considerations
 
-- The `Yuriai_API_KEY` is automatically generated if not provided. Ensure to keep this key secure and do not share it publicly.
+- The `Zenai_API_KEY` is automatically generated if not provided. Ensure to keep this key secure and do not share it publicly.
 - When using authentication providers (GitHub, Google, Microsoft), ensure that the client IDs and secrets are kept confidential.
 - Be cautious when enabling file uploads and voice input, as these features may introduce potential security risks if not properly managed.
 
 ## Configuration
 
-Each Yuri AI Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
+Each Zen AI Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
 
 ## Documentation
 
-Need more information? Check out the documentation for more details to get a better understanding of the concepts and features of Yuriai.
+Need more information? Check out the documentation for more details to get a better understanding of the concepts and features of Zenai.
 
 ## Other Repositories
 
-Check out the other Yuri AI repositories - these include the Yuri AI Streamlit Web UI, Yuri AI Python SDK, Yuri AI TypeScript SDK, Yuri AI Dart SDK, Yuri AI C# SDK, and more!
+Check out the other Zen AI repositories - these include the Zen AI Streamlit Web UI, Zen AI Python SDK, Zen AI TypeScript SDK, Zen AI Dart SDK, Zen AI C# SDK, and more!
