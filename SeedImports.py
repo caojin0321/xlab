@@ -7,7 +7,7 @@ from DB import (
     ProviderSetting,
     Prompt,  
     PromptCategory, 
-    Argument,
+    Argument, 
     Extension,
     Setting,
     Command,
