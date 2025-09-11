@@ -4,7 +4,7 @@ import sys
 import subprocess
 import random
 import argparse 
-import platform
+import platform 
 import socket  
  
 try:
