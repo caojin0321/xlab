@@ -5,7 +5,7 @@ edition = { workspace = true }
 license = "MIT"
 readme = "README.md"
 description = "AWS Bedrock model provider for xlab integration."
-
+ 
 [dependencies]
 async-stream = { workspace = true }
 aws-config = { workspace = true, features = ["behavior-version-latest"] }
