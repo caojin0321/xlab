@@ -7,18 +7,18 @@ Do not explain, this is not a conversation, put any usage examples necessary in 
 
 Framework example:
 ```python
-# pip install r136
+# pip install yandaai
 from typing import List
 from Extensions import Extensions
-from r136 import r136
+from yandaai import yandaai
 
 class agent_interactions(Extensions):
     def __init__(self, AGENT_API_KEY: str = None):
         self.AGENT_API_KEY = AGENT_API_KEY
         if self.AGENT_API_KEY:
             self.commands = {
-                "Ask r136": self.ask_the_agent
+                "Ask yandaai": self.ask_the_agent
             }
     async def ask_the_agent(self, prompt: str) -> List[str]:       
-        return await r136().run(prompt, commands_enabled=False)
+        return await yandaai().run(prompt, commands_enabled=False)
 ```
