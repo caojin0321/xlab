@@ -6,7 +6,7 @@ except ImportError:
  
     # `fasteners`` is required for libcloud to work, but libcloud doesn't install it.  
     subprocess.check_call([sys.executable, "-m", "pip", "install", "fasteners"])
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "apache-libcloud"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "apache-libcloud"]) 
     subprocess.check_call([sys.executable, "-m", "pip", "install", "watchdog"])
     from libcloud.storage.types import Provider, ContainerDoesNotExistError
 from libcloud.storage.providers import get_driver
