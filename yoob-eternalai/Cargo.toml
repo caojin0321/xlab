@@ -1,0 +1,23 @@
+[package]
+name = "yoob-eternalai"
+version = "0.3.6"
+edition = { workspace = true }
+license = "MIT"
+readme = "README.md"
+description = "EternalAI model provider yoob integration."
+repository = "https://github.com/caojin0321/yoob"
+
+[dependencies]
+yoob-core = { path = "../yoob-core", version = "0.19.0" }
+ethers = { workspace = true }
+reqwest = { workspace = true, features = ["json"] }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+schemars = { workspace = true }
+async-stream = { workspace = true }
+
+[dev-dependencies]
+anyhow = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tracing-subscriber = { workspace = true }
