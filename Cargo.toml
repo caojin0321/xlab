@@ -8,7 +8,7 @@ members = [
     "xlab-postgres",
     "xlab-qdrant",
     "xlab-core/xlab-core-derive",
-    "xlab-scylladb",
+    "xlab-scylladb", 
     "xlab-sqlite",
     "xlab-surrealdb",
     "xlab-eternalai",
